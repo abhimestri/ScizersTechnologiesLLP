@@ -35,7 +35,6 @@ class Output extends Component {
     componentDidMount(){
         axios.get('https://scizers-technologies-llp.firebaseio.com/data.json')
             .then(res => {
-                let r;
                 Object.entries(res.data).forEach(el => {
                     const Data = {
                         id : el[0],
@@ -45,7 +44,6 @@ class Output extends Component {
                     this.setState({ presentData :  this.state.presentData.concat(Data)})
                 })
                 this.props.setOutputData([...this.state.presentData])
-                console.log(r)
             })
             .catch(err => {
                 console.log(err)
@@ -64,15 +62,12 @@ class Output extends Component {
                     filter.push(el)
                 }
             })
-            console.log("in if")
             console.log(filter)
             sorted = filter.sort((a,b) => {
                 const isReversed = 1;
                 return isReversed * a.name.localeCompare(b.name)
             })
         }else{
-            console.log("in else statement")
-            console.log(this.props.outputList)
             sorted = this.props.outputList.sort((a,b) => {
                 const isReversed = 1;
                 return isReversed * a.name.localeCompare(b.name)

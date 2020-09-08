@@ -21,10 +21,14 @@ class Editblock extends Component {
 
 
     editData = () => {
-        firebase.child(`data/${this.props.data.id}`).set({
-            email : this.state.name,
-            phoneNumber : this.state.phoneNumber
-        })
+        if(this.state.phoneNumber.length === 10){
+            firebase.child(`data/${this.props.data.id}`).set({
+                email : this.state.name,
+                phoneNumber : this.state.phoneNumber
+            })
+        }else{
+            alert("enter phonr number with 10 digits")
+        }
         this.props.setEditModalClassName("editBlockClose")
         window.location.reload(false)
     }
@@ -35,9 +39,6 @@ class Editblock extends Component {
     }
 
     render(){
-        
-        console.log('edited value');
-        console.log(this.props.data)
         return(
             <div className={this.props.className} >
                 <p className="closeEditModal" onClick={this.closeEditModal} >X</p>

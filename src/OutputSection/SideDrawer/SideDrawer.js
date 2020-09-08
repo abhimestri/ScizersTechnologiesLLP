@@ -3,7 +3,6 @@ import './SideDrawer.css'
 import { connect } from 'react-redux'
 import * as actionCreators from '../../Store/Actions/action'
 import * as actionType from '../../Store/Actions/actionTypes'
-import axios from 'axios'
 
 class Sidedrawer extends Component{
 
@@ -31,27 +30,25 @@ class Sidedrawer extends Component{
             phoneNumber : this.state.phoneNumber
         }
         if(Data.phoneNumber.toString().length === 10){
-            axios.get("https://scizers-technologies-llp.firebaseio.com/data.json")
-                    .then(res => {
-                        console.log("in if of update user")
-                        Object.entries(res.data).forEach(el  => {
-                            if(el[1].phoneNumber === Data.phoneNumber){
-                                this.setState({isPresent : true})
-                            }
-                        })
-                        if(!this.state.isPresent){
-                            this.props.setUserData(Data)
-                        }else{
-                            alert("phone number already in use")
-                        }
-                    })
+            let isPresent = false
+            this.props.outputList.forEach(el => {
+                console.log("in sidedrawer if")
+                console.log(el.phoneNumber)
+                console.log(Data.phoneNumber)
+                if(el.phoneNumber === Data.phoneNumber){
+                    isPresent = true
+                }
+            })
+            if(!isPresent){
+                this.props.setUserData(Data)
+            }
         }else{
             alert("number should be of 10 digits")
         }
         this.props.toggleSideDrawer(false)
         setTimeout(() => {
             window.location.reload(false)
-        },500)
+        },600)
     }
 
     render(){
@@ -77,7 +74,8 @@ class Sidedrawer extends Component{
 const mapStateToProps = state => {
     return {
         isOpen : state.uiToggle.showSideDrawer,
-        userData : state.uiToggle.userData
+        userData : state.uiToggle.userData,
+        outputList  : state.uiToggle.outputList
     }
 }
 
