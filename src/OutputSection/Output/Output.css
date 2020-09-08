@@ -1,0 +1,170 @@
+.OutputDataTable{
+    width: 80%;
+    height: 60vh;
+    position: absolute;
+    top: 35vh;
+    left: 10%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    overflow: scroll;
+}
+.attributesSec{
+    display: flex;
+}
+.attributesSecName{
+    font-size: 20px;
+    color: #333;
+    margin: 3vh 0 0 10%;
+}
+.attributesSecPhoneNumber{
+    font-size: 20px;
+    color: #333;
+    margin: 3vh 0 0 20%;
+}
+.seperatorLine{
+    width: 100%;
+    position: relative;
+    height: 1px;
+    background-color: #ccc;
+    margin: 2vh 0 0 0;
+}
+.ListElement{
+    display: flex;
+    width: 96%;
+    height: 9vh;
+    border-bottom: 1px solid #ccc;
+}
+.ListElement > li{
+    list-style: none;
+}
+.listElName{
+    font-size: 18px;
+    color: #333;
+    margin: 4vh 0 0 7%;
+}
+.listElPhoneNumber{
+    font-size: 18px;
+    color: #333;
+    position: absolute;
+    left: 35%;
+    margin: 4vh 0 0 0;
+}
+.deleteBtn{
+    width: 120px;
+    height: 35px;
+    background-color: #fff;
+    color: red;
+    border-radius: 4px;
+    font-size: 15px;
+    border:1px solid red ;
+    position: absolute;
+    margin: 2vh 0 0 80%;
+    transition: all ease-in-out 0.3s;
+}
+.deleteBtn:hover{
+    background-color: red;
+    color: #fff;
+}
+
+.editBtn{
+    width: 100px;
+    height: 35px;
+    background-color: #fff;
+    color: blue;
+    border-radius: 4px;
+    font-size: 15px;
+    border:1px solid blue ;
+    position: absolute;
+    margin: 2vh 0 0 70%;
+    transition: all ease-in-out 0.3s;
+}
+.editBtn:hover{
+    background-color: blue;
+    color: #fff;
+}
+
+@media(max-width:1300px){
+    .deleteBtn{
+        width: 120px;
+        height: 35px;
+        font-size: 15px;
+        margin: 2vh 0 0 75%;
+    }
+    .editBtn{
+        width: 100px;
+        height: 35px;
+        font-size: 15px;
+        margin: 2vh 0 0 60%;
+    }
+}
+@media(max-width:880px){
+    .deleteBtn{
+        margin: 2vh 0 0 70%;
+    }
+    .editBtn{
+        margin: 2vh 0 0 50%;
+    }
+}
+
+@media(max-width:700px){
+    .ListElement{
+        height: 18vh;
+        border-bottom: 1px solid #ccc;
+    }
+    .deleteBtn{
+        margin: 10vh 0 0 65%;
+    }
+    .editBtn{
+        margin: 10vh 0 0 45%;
+    }
+}
+@media(max-width:600px){
+    .ListElement{
+        height: 18vh;
+        border-bottom: 1px solid #ccc;
+    }
+    .deleteBtn{
+        margin: 10vh 0 0 40%;
+    }
+    .editBtn{
+        margin: 10vh 0 0 15%;
+    }
+    .listElName{
+        font-size: 16px;
+        margin: 4vh 0 0 -2%;
+    }
+    .listElPhoneNumber{
+        font-size: 16px;
+        left: 45%;
+    }
+}
+@media(max-width:500px){
+    .deleteBtn{
+        margin: 10vh 0 0 40%;
+    }
+    .editBtn{
+        margin: 10vh 0 0 1%;
+    }
+}
+@media(max-width:380px){
+    .listElName{
+        font-size: 16px;
+        margin: 4vh 0 0 -2%;
+    }
+    .listElPhoneNumber{
+        font-size: 16px;
+        left: 45%;
+    }
+}
+@media(max-width:360px){
+    .deleteBtn{
+        width: 50px;
+        font-size: 10px;
+        margin: 10vh 0 0 40%;
+    }
+    .editBtn{
+        width: 50px;
+        font-size: 10px;
+        margin: 10vh 0 0 1%;
+    }
+}

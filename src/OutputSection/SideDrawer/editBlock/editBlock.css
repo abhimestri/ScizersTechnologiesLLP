@@ -1,0 +1,102 @@
+.editBlockClose{
+    border: 1px solid rgb(95, 94, 94);
+    width: 35%;
+    height: 300px;
+    margin-bottom: 10vh;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    margin-top: -170%;
+    z-index: 4;
+    background-color: #fff;
+}
+.editModalOpen{
+    position: absolute;
+    top: 15vh;
+    left: 20%;
+    border: 1px solid rgb(95, 94, 94);
+    width: 35%;
+    height: 300px;
+    margin-bottom: 10vh;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    animation: modalAnimation ease-in-out 0.3s forwards ;
+    z-index: 4;
+    background-color: #fff;
+}
+@keyframes modalAnimation {
+    0% {
+        margin-top: -22%;
+    }
+    50% {
+        margin-top: 2%;
+    }
+    100% {
+        margin-top: -2%;
+    }
+}
+
+.closeEditModal{
+    position: relative;
+    left: 93%;
+    top: 5%;
+    cursor: pointer;
+}
+.editBlockTitle{
+    font-size: 25px;
+    text-align: center;
+    margin: 2vh 0 0 0 ;
+}
+.nameInputEditBlock{
+    padding: 10px;
+    width: 80%;
+    height: 12%;
+    margin: 4vh 0 0 8vh;
+    border-radius: 4px;
+    border: 1px solid rgb(179, 177, 177);
+}
+.phoneInputEditBlock{
+    padding: 10px;
+    width: 80%;
+    height: 12%;
+    margin: 3vh 0 0 8vh;
+    border-radius: 4px;
+    border: 1px solid rgb(179, 177, 177);
+}
+.editBTN{
+    width: 70%;
+    height: 35px;
+    margin: 7% 0 0 15%;
+    border: 1px solid #333;
+    background-color: #fff;
+    transition: all ease-in-out 0.3s;
+    border-radius: 4px;
+}
+.editBTN:hover{
+    background-color: #333;
+    color: #fff;
+}
+@media(max-width:1000px){
+    .nameInputEditBlock{
+        margin: 4vh 0 0 2vh;
+    }
+    .phoneInputEditBlock{
+        margin: 3vh 0 0 2vh;
+    }
+}
+@media(max-width:500px){
+    .closeEditModal{
+        left: 13%;
+    }
+    .nameInputEditBlock{
+        margin: 4vh 0 0 2vh;
+    }
+    .phoneInputEditBlock{
+        margin: 3vh 0 0 2vh;
+    }
+}
