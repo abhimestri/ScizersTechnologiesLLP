@@ -105,6 +105,16 @@
         margin: 2vh 0 0 50%;
     }
 }
+@media(max-width:800px){
+    .listElName{
+        font-size: 16px;
+        margin: 4vh 0 0 -2%;
+    }
+    .listElPhoneNumber{
+        font-size: 16px;
+        left: 35%;
+    }
+}
 
 @media(max-width:700px){
     .ListElement{
@@ -145,15 +155,23 @@
     .editBtn{
         margin: 10vh 0 0 1%;
     }
-}
-@media(max-width:380px){
     .listElName{
-        font-size: 16px;
+        font-size: 13px;
         margin: 4vh 0 0 -2%;
     }
     .listElPhoneNumber{
-        font-size: 16px;
+        font-size: 13px;
         left: 45%;
+    }
+}
+@media(max-width:380px){
+    .listElName{
+        font-size: 13px;
+        margin: 4vh 0 0 -2%;
+    }
+    .listElPhoneNumber{
+        font-size: 13px;
+        left: 55%;
     }
 }
 @media(max-width:360px){
